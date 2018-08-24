@@ -5,17 +5,11 @@
 
 puts("Please enter your word")
 @word = gets.strip.chars
-@half = @word.length/2
 
-
-
-    @half.times do |i|
-       if (@word[i]==@word[@word.length - (i+1)])
-        puts "palindrome"
-       else
-        puts "not"
-       end
+    (@word.length/2).times do |i|
+       @palindrome = (@word[i]==@word[@word.length - (i+1)])
     end
+    puts @palindrome
 
 
 
